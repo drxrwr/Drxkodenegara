@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Code Number Formatter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Country Code Number Formatter</h1>
+    <p class="subtitle">Tambah kode negara otomatis tanpa merusak struktur baris</p>
+
+    <!-- Upload -->
+    <div class="card">
+      <label>Upload File TXT</label>
+      <input type="file" id="fileInput" accept=".txt">
+      <textarea id="inputText" placeholder="Atau paste nomor di sini..."></textarea>
+    </div>
+
+    <!-- Pengaturan -->
+    <div class="card">
+      <label>Kode Negara</label>
+      <input type="text" id="countryCode" placeholder="Contoh: +62">
+
+      <div class="checkbox">
+        <input type="checkbox" id="skipExisting" checked>
+        <label for="skipExisting">Skip nomor yang sudah diawali +</label>
+      </div>
+    </div>
+
+    <!-- Tombol -->
+    <div class="actions">
+      <button id="processBtn">Proses Nomor</button>
+      <button id="downloadBtn" disabled>Download TXT</button>
+    </div>
+
+    <!-- Statistik -->
+    <div class="card stats" id="statsBox" style="display:none;">
+      <p>Total Nomor: <span id="totalCount">0</span></p>
+      <p>Berhasil Diproses: <span id="successCount">0</span></p>
+      <p>Diskip: <span id="skipCount">0</span></p>
+      <p>Error: <span id="errorCount">0</span></p>
+    </div>
+
+    <!-- Preview -->
+    <div class="card">
+      <label>Preview Hasil</label>
+      <textarea id="outputText" readonly></textarea>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
